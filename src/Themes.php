@@ -609,8 +609,8 @@ class Themes
 	/**
 	 * Set Variable to be passed into template
 	 * 
-	 * @param string|array $key
-	 * @param mixed        $value
+	 * @param mixed $key
+	 * @param mixed $value
 	 * 
 	 * @return self 
 	 */
