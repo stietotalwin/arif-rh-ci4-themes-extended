@@ -83,7 +83,9 @@ if (! function_exists('plugin_url'))
  *
  * @return string
  */
-function translate(string $file, array $langs = [])
+if (! function_exists('translate'))
+{
+	function translate(string $file, array $langs = [])
 {
 	$contents = is_file($file) ? file_get_contents($file) : $file;
 
@@ -97,5 +99,6 @@ function translate(string $file, array $langs = [])
 		}
 	}
 
-	return $contents;
+		return $contents;
+	}
 }
