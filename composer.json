@@ -1,0 +1,42 @@
+{
+	"name": "arif-rh/ci4-themes",
+	"description": "Theme management for CodeIgniter 4",
+	"keywords": [
+		"codeigniter",
+		"codeigniter4",
+		"themes",
+		"CI Theme"
+	],
+	"homepage": "https://github.com/arif-rh/ci4-themes",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Arif RH",
+			"email": "arifrahmanhakim.net@gmail.com",
+			"homepage": "https://github.com/arif-rh",
+			"role": "Developer"
+		}
+	],
+	"require": {
+		"php": "^7.4|^8.0|^8.1"
+	},
+	"autoload": {
+		"psr-4": {
+			"ArifrhFeatStieTotalWin\\Themes\\": "src",
+			"ArifrhFeatStieTotalWin\\ThemesTest\\": "tests"
+		}
+	},
+	"suggest": {
+        "arif-rh/ci4-themes-material-kit": "Use Bootstrap 4 Material Design Kit for your theme"
+    },
+	"require-dev": {
+		"mikey179/vfsstream": "1.6.*",
+		"phpunit/phpunit": "^8",
+		"codeigniter4/framework": "^4.1",
+		"php-coveralls/php-coveralls": "^2.2"
+	},
+	"scripts": {
+		"test": "vendor/bin/phpunit tests",
+		"testdox": "vendor/bin/phpunit --testdox tests"
+	}
+}
