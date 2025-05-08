@@ -28,8 +28,8 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"ArifrhFeatStieTotalWin\\Themes\\": "src",
-			"ArifrhFeatStieTotalWin\\ThemesTest\\": "tests"
+			"StieTotalWin\\Themes\\": "src",
+			"StieTotalWin\\ThemesTest\\": "tests"
 		}
 	},
 	"suggest": {

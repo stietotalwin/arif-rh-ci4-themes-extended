@@ -1,4 +1,4 @@
-<?php namespace ArifrhFeatStieTotalWin\Themes\Config;
+<?php namespace StieTotalWin\Themes\Config;
 
 use CodeIgniter\Config\BaseConfig;
 

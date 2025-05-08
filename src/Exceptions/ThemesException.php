@@ -1,4 +1,4 @@
-<?php namespace ArifrhFeatStieTotalWin\Themes\Exceptions;
+<?php namespace StieTotalWin\Themes\Exceptions;
 
 use CodeIgniter\Exceptions\ExceptionInterface;
 use CodeIgniter\Exceptions\FrameworkException;

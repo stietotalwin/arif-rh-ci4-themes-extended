@@ -1,6 +1,6 @@
-<?php namespace ArifrhFeatStieTotalWin\ThemesTest\Config;
+<?php namespace StieTotalWin\ThemesTest\Config;
 
-class Themes extends \ArifrhFeatStieTotalWin\Themes\Config\Themes
+class Themes extends \StieTotalWin\Themes\Config\Themes
 {
     /**
 	 * Default Theme name

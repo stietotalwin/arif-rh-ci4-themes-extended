@@ -8,7 +8,7 @@
      * This will render any CSS added into theme on the fly,
      * You can directly load common css before call renderCSS();
     */
-    ArifrhFeatStieTotalWin\Themes\Themes::renderCSS();
+    StieTotalWin\Themes\Themes::renderCSS();
     ?>
 </head>
 <body>

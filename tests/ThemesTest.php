@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 use org\bovigo\vfs\vfsStream;
 use PHPUnit\Framework\TestCase;
-use ArifrhFeatStieTotalWin\Themes\Config as Config;
-use ArifrhFeatStieTotalWin\Themes\Themes;
+use StieTotalWin\Themes\Config as Config;
+use StieTotalWin\Themes\Themes;
 
 
 final class ThemesTest extends TestCase
@@ -30,7 +30,7 @@ final class ThemesTest extends TestCase
         $this->assertContainsOnlyInstancesOf(
             Themes::class,
             [Themes::init($config)],
-            'Themes is not an instance of ArifrhFeatStieTotalWin\Themes\Themes'
+            'Themes is not an instance of StieTotalWin\Themes\Themes'
         );
 
         // init without passing config
@@ -38,7 +38,7 @@ final class ThemesTest extends TestCase
         $this->assertContainsOnlyInstancesOf(
             Themes::class,
             [Themes::init()],
-            'Themes is not an instance of ArifrhFeatStieTotalWin\Themes\Themes'
+            'Themes is not an instance of StieTotalWin\Themes\Themes'
         );
     }
 
@@ -204,7 +204,7 @@ final class ThemesTest extends TestCase
 
         $this->assertEquals('starter', $themeConfig['theme']);
 
-        $config = new ArifrhFeatStieTotalWin\ThemesTest\Config\Themes();
+        $config = new StieTotalWin\ThemesTest\Config\Themes();
         
         $this->themes = Themes::init($config);
 
@@ -215,7 +215,7 @@ final class ThemesTest extends TestCase
 
     public function testLoadPlugins()
     {
-        $config = new ArifrhFeatStieTotalWin\ThemesTest\Config\Themes();
+        $config = new StieTotalWin\ThemesTest\Config\Themes();
         
         $this->themes = Themes::init($config);
 
@@ -232,7 +232,7 @@ final class ThemesTest extends TestCase
 
     public function testLoadNonExistPlugins()
     {
-        $this->expectException(ArifrhFeatStieTotalWin\Themes\Exceptions\ThemesException::class);
+        $this->expectException(StieTotalWin\Themes\Exceptions\ThemesException::class);
 
         $plugin = 'non-exist-plugin';
 
@@ -241,9 +241,9 @@ final class ThemesTest extends TestCase
 
     public function testLoadPluginsWithMissingFiles()
     {
-        $this->expectException(ArifrhFeatStieTotalWin\Themes\Exceptions\ThemesException::class);
+        $this->expectException(StieTotalWin\Themes\Exceptions\ThemesException::class);
 
-        $config = new ArifrhFeatStieTotalWin\ThemesTest\Config\Themes();
+        $config = new StieTotalWin\ThemesTest\Config\Themes();
         
         $this->themes = Themes::init($config);
 
@@ -254,7 +254,7 @@ final class ThemesTest extends TestCase
     
     public function testRenderCss()
     {
-        $config = new ArifrhFeatStieTotalWin\ThemesTest\Config\Themes();
+        $config = new StieTotalWin\ThemesTest\Config\Themes();
         
         $this->themes = Themes::init($config);
 
@@ -283,7 +283,7 @@ final class ThemesTest extends TestCase
 
     public function testRenderJs()
     {
-        $config = new ArifrhFeatStieTotalWin\ThemesTest\Config\Themes();
+        $config = new StieTotalWin\ThemesTest\Config\Themes();
         
         $this->themes = Themes::init($config);
 
@@ -315,7 +315,7 @@ final class ThemesTest extends TestCase
 
     public function testRenderMissingTemplate()
     {
-        $this->expectException(ArifrhFeatStieTotalWin\Themes\Exceptions\ThemesException::class);
+        $this->expectException(StieTotalWin\Themes\Exceptions\ThemesException::class);
 
         $this->themes->setTemplate('non-exist-template');
 		$this->themes::render('This will never be rendered');
@@ -361,7 +361,7 @@ final class ThemesTest extends TestCase
         ];
 
         ob_start();
-		$this->themes::render('ArifrhFeatStieTotalWin\ThemesTest\Views\TestView', $data);
+		$this->themes::render('StieTotalWin\ThemesTest\Views\TestView', $data);
 		$renderString = ob_get_contents();
         @ob_end_clean();
         

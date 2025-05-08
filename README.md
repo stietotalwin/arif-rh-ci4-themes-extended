@@ -51,14 +51,14 @@ public/
 
 # Themes Config
 
-- Full name: \ArifrhFeatStieTotalWin\Themes\Config\Themes
+- Full name: \StieTotalWin\Themes\Config\Themes
 
 This is default config themes. You can override themes by extending this default themes, for example make file inside App\Config\
 
 ```php
 <?php namespace Config;
 
-class Adminlte extends \ArifrhFeatStieTotalWin\Themes\Config\Themes
+class Adminlte extends \StieTotalWin\Themes\Config\Themes
 {
  public $theme = 'Adminlte';
     
@@ -72,7 +72,7 @@ You can use this new theme config later.
 
 Class Themes
 
-- Full name: \ArifrhFeatStieTotalWin\Themes\Themes
+- Full name: \StieTotalWin\Themes\Themes
 
 ### init
 
@@ -95,7 +95,7 @@ Example Usage:
 ```php
 <?php 
 
-use ArifrhFeatStieTotalWin\Themes\Themes;
+use StieTotalWin\Themes\Themes;
 
 // inside your controller
     
@@ -121,7 +121,7 @@ addCSS(string|array $css_files)
 
 **Return Value:**
 
-ArifrhFeatStieTotalWin\Themes\Themes
+StieTotalWin\Themes\Themes
 
 **NOTE**: All non-static method always return the chained object, so you can call next method directly.
 
@@ -244,7 +244,7 @@ loadPlugins(string|array $plugins)
 | ---------- | --------------------- | ---------------------------- |
 | `$plugins` | **string&#124;array** | Registered plugins key name. |
 
-Plugins are registered inside `\Config\Themes`. This is an example in `\ArifrhFeatStieTotalWin\Themes\Config\Themes` about how to define plugins.
+Plugins are registered inside `\Config\Themes`. This is an example in `\StieTotalWin\Themes\Config\Themes` about how to define plugins.
 
 ```php
 /**
@@ -471,7 +471,7 @@ Themes::render('dashboard')
 This method will render all CSS themes. This usually should be called inside header template
 
 ```php
-<?php ArifrhFeatStieTotalWin\Themes\Themes::renderCSS(); ?>
+<?php StieTotalWin\Themes\Themes::renderCSS(); ?>
 ```
 
 ---
@@ -481,7 +481,7 @@ This method will render all CSS themes. This usually should be called inside hea
 This method will render all JavaScript themes. This usually should be called inside footer template.
 
 ```php
-<?php ArifrhFeatStieTotalWin\Themes\Themes::renderJS(); ?>
+<?php StieTotalWin\Themes\Themes::renderJS(); ?>
 ```
 
 ---

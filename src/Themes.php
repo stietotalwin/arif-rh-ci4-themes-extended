@@ -12,15 +12,15 @@
  * @version   0.0.1
  */
 
-namespace ArifrhFeatStieTotalWin\Themes;
+namespace StieTotalWin\Themes;
 
-use ArifrhFeatStieTotalWin\Themes\Exceptions\ThemesException;
-use ArifrhFeatStieTotalWin\Themes\Config\Themes as ThemesConfig;
+use StieTotalWin\Themes\Exceptions\ThemesException;
+use StieTotalWin\Themes\Config\Themes as ThemesConfig;
 
 /**
  * Class Themes
  *
- * @package ArifrhFeatStieTotalWin\Themes
+ * @package StieTotalWin\Themes
  */
 class Themes
 {
@@ -81,7 +81,7 @@ class Themes
 	protected static $themeVars = [];
 
 	/**
-	 * Themes Configuration - Used from \ArifrhFeatStieTotalWin\Config\Themes but can be overiden in the run-time
+	 * Themes Configuration - Used from \StieTotalWin\Config\Themes but can be overiden in the run-time
 	 *
 	 * @var    array
 	 * @access protected
@@ -91,7 +91,7 @@ class Themes
 	/**
 	 * Initializes the Themes instance.
 	 *
-	 * @param ThemesConfig|array|null $config Optional configuration from \ArifrhFeatStieTotalWin\Themes\Config\Themes or array.
+	 * @param ThemesConfig|array|null $config Optional configuration from \StieTotalWin\Themes\Config\Themes or array.
 	 * @return self
 	 */
 	public static function init($config = null)
